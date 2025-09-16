@@ -1,12 +1,13 @@
 /*
  * Author: Diego Arturo Meneses Prieto
- * Date: 2025-09-09
+ * Date: 2025-09-12
  * Course: CIST-004B1 - Advanced Java Data Structures
  * Homework: #5
  * Description: The program uses recursion and iteration in order to get the binomial coefficient of a pair of numbers
  * Honor Code: I affirm that this program is entirely my own work.
  * Collaboration: Intellisense suggested I cast the iterative one due to lossy conversion, and that fixed my
- * error of it returning 0
+ * error of it returning 0, I also used a website https://www.calculatorsoup.com/calculators/discretemathematics/combinations.php
+ * to verify my answers
  *
  * made a typo in the class only just noticed
  */

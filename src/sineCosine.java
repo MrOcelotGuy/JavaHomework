@@ -1,12 +1,12 @@
 import java.util.*;
 /*
  * Author: Diego Arturo Meneses Prieto
- * Date: 2025-09-09
+ * Date: 2025-09-12
  * Course: CIST-004B1 - Advanced Java Data Structures
- * Homework: #4
- * Description: The program uses a lambda expression and an interface in order to calculate factorials
+ * Homework: #6
+ * Description: The program recursively finds the sine and cosine, then compares the results to the Math class results
  * Honor Code: I affirm that this program is entirely my own work.
- * Collaboration:
+ * Collaboration: checked my calculus notebook to check up on double angle identity
  */
 
 public class sineCosine

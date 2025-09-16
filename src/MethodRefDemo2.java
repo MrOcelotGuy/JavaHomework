@@ -1,11 +1,11 @@
 /*
  * Author: Diego Arturo Meneses Prieto
- * Date: 2025-09-09
+ * Date: 2025-09-12
  * Course: CIST-004B1 - Advanced Java Data Structures
  * Homework: #4
  * Description: This program uses a functional interface and method reference to check if 2 numbers share a common factor
  * Honor Code: I affirm that this program is entirely my own work.
- * Collaboration:
+ * Collaboration: none
  */
 
 
