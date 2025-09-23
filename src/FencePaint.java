@@ -70,7 +70,7 @@ public class FencePaint
 
     public static void main(String[] args) throws IOException {
 
-        runTests("/Users/diegomeneses/Downloads/fence_painting_test_cases"
+        runTests("/Users/diegomeneses/Projects/Java School Project/JavaHomework/Test_Cases/fence_painting_test_cases"
                 , 10);
 
 //        boolean overlap = a < c && c< b || a < d < b || c < a < d || c < b < d;
