@@ -8,13 +8,8 @@ public class RecordKeep
     {
         Scanner in = new Scanner(System.in);
 
-        int tally = 0;
-
         int hours = in.nextInt();
-        in.nextLine(); //token read vs line read kekwwww
-
-
-//        List<Set<String>> groups = new ArrayList<Set<String>>();
+        in.nextLine();
 
         Map<String, Integer> groups = new TreeMap<>();
 
@@ -35,14 +30,7 @@ public class RecordKeep
 
        List<Integer> thing = new ArrayList<>(groups.values());
         Collections.sort(thing);
-        System.out.println(thing.get(thing.size()-1));
+        System.out.println(thing.getLast());
 
-
-        System.out.println(groups.size());
-        System.out.println(groups);
-
-       ;
-
-//        System.out.println(tally);
     }
 }
