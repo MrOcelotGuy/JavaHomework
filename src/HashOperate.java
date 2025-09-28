@@ -6,7 +6,7 @@ import java.util.*;
  * Homework: #10
  * Description: This program operates on two different linkedHashSets to show I know how
  * Honor Code: I affirm that this program is entirely my own work.
- * Collaboration:
+ * Collaboration: You helped me to understand what had to be done Mr. Liu.
  */
 
 public class HashOperate
@@ -28,6 +28,7 @@ public class HashOperate
         secondSet.add("Kevin");
         secondSet.add("Michelle");
         secondSet.add("Ryan");
+
 
 
 
