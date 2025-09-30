@@ -25,7 +25,9 @@ public class SelectionSortGeneric
         System.out.println("Post Sort: " + Arrays.toString(list1));
 
         String[] list2 = {"red", "blue", "green", "yellow", "orange", "pink"};
-        selectionSort(list2, );
+        System.out.println("Pre Sort: " + Arrays.toString(list2));
+        selectionSort(list2, new StringLastCharacterComparator());
+        System.out.println("Post Sort: " + Arrays.toString(list2));
     }
 
     public static <E> void selectionSort(E[] list, Comparator<? super E> comparator)

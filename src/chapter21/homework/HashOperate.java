@@ -1,3 +1,5 @@
+package chapter21.homework;
+
 import java.util.*;
 /*
  * Author: Diego Arturo Meneses Prieto
