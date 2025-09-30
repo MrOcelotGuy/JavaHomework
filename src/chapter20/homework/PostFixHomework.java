@@ -1,3 +1,4 @@
+package chapter20.homework;
 import java.util.*;
 /*
  * Author: Diego Arturo Meneses Prieto
@@ -10,7 +11,8 @@ import java.util.*;
  */
 
 
-public class PostFix
+
+public class PostFixHomework
 {
     public static void main(String[] args)
     {

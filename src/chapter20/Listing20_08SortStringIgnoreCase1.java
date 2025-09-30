@@ -2,8 +2,6 @@ package chapter20;
 
 import java.util.Comparator;
 
-import chapter13.GeometricObject;
-
 public class Listing20_08SortStringIgnoreCase1 {
 	public static void main(String[] args) {
 		java.util.List<String> cities = java.util.Arrays.asList("Atlanta", "Savannah", "new York", "dallas");

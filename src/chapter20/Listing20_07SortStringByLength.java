@@ -1,7 +1,5 @@
 package chapter20;
 
-import java.util.Arrays;
-
 public class Listing20_07SortStringByLength {
 	public static void main(String[] args) {
 		String[] cities = { "Atlanta", "Savannah", "New York", "Dallas" };
