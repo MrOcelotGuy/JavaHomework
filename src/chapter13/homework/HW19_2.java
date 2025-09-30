@@ -1,5 +1,15 @@
 package chapter13.homework;
 
+/*
+ * Author: Diego Arturo Meneses Prieto
+ * Date: 2025-09-09
+ * Course: CIST-004B1 - Advanced Java Data Structures
+ * Homework: #2
+ * Description: Generic method to find the maximum
+ * Honor Code: I affirm that this program is entirely my own work.
+ * Collaboration: none
+ */
+
 public class HW19_2 {
   public static void main(String[] args)
   {

@@ -2,6 +2,15 @@ package chapter13.homework;
 
 import java.util.ArrayList;
 
+/*
+ * Author: Diego Arturo Meneses Prieto
+ * Date: 2025-09-09
+ * Course: CIST-004B1 - Advanced Java Data Structures
+ * Homework: #1
+ * Description: This program removes duplicates from a list
+ * Collaboration: none
+ */
+
 public class HW19_1 {
   public static void main(String[] args) {
     ArrayList<Integer> list = new ArrayList<Integer>();
