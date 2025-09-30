@@ -73,20 +73,5 @@ public class FencePaint
         runTests("/Users/diegomeneses/Projects/Java School Project/JavaHomework/Test_Cases/fence_painting_test_cases"
                 , 10);
 
-//        boolean overlap = a < c && c< b || a < d < b || c < a < d || c < b < d;
-//
-
-//        if(!overlap)
-//        {
-//            System.out.println((b-a)+(d-c));
-//        }
-//        else if(d < b)
-//        {
-//            System.out.println(b-c);
-//        }
-//        else
-//        {
-//            System.out.println(d-c);
-//        }
     }
 }
