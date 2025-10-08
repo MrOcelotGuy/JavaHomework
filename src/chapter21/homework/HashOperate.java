@@ -18,6 +18,7 @@ public class HashOperate
         LinkedHashSet<String> firstSet = new LinkedHashSet<>();
         LinkedHashSet<String> secondSet = new LinkedHashSet<>();
 
+
         firstSet.add("George");
         firstSet.add("Jim");
         firstSet.add("John");
@@ -31,9 +32,26 @@ public class HashOperate
         secondSet.add("Michelle");
         secondSet.add("Ryan");
 
+        LinkedHashSet<String> firstSetClone1 = (LinkedHashSet<String>) firstSet.clone () ;
+        LinkedHashSet<String> firstSetClone2 = (LinkedHashSet<String>) firstSet.clone () ;
+        LinkedHashSet<String> firstSetClone3 = (LinkedHashSet<String>) firstSet.clone () ;
 
+        firstSetClone1.addAll(secondSet);
+        firstSetClone2.removeAll(secondSet);
+        firstSetClone3.retainAll(secondSet);
 
-
+        System.out.println("Union: " + firstSetClone1);
+        System.out.println("Difference: " + firstSetClone2);
+        System.out.println("Intersection: " + firstSetClone3);
 
     }
 }
+/*
+/Users/diegomeneses/Library/Java/JavaVirtualMachines/openjdk-24.0.2+12-54/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=53937 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/diegomeneses/Projects/Java School Project/JavaHomework/out/production/Java Homework chapter21.homework.HashOperate
+Union: [George, Jim, John, Blake, Kevin, Michael, Katie, Michelle, Ryan]
+Difference: [Jim, John, Blake, Michael]
+Intersection: [George, Kevin]
+
+Process finished with exit code 0
+
+ */

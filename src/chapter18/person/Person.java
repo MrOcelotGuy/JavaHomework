@@ -1,4 +1,4 @@
-package person;
+package chapter18.person;
 
 public class Person implements Displayable {
 	private String name;

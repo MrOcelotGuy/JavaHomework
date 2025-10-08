@@ -1,3 +1,5 @@
+package labs;
+
 import java.util.*;
 
 //collaboration https://stackoverflow.com/questions/7999192/creating-an-array-of-sets-in-java
