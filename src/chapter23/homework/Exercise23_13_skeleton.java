@@ -17,11 +17,13 @@ public class Exercise23_13_skeleton
 		long[][] executionTime = new long[6][7];
 
 		final int BASE = 10000;
-		for (int k = 0; k < 6; k++) {
+		for (int k = 0; k < 6; k++)
+        {
 			list = new int[(k + 1) * BASE];
 			list1 = new int[(k + 1) * BASE];
 			list2 = new Integer[(k + 1) * BASE];
-			for (int i = 0; i < list.length; i++) {
+			for (int i = 0; i < list.length; i++)
+            {
 				list[i] = (int) (Math.random() * 100000);
 				list1[i] = list[i];
 				list2[i] = list[i];
@@ -128,7 +130,8 @@ public class Exercise23_13_skeleton
 	 * Sort the int array list. numberOfDigits is the number of digits in the
 	 * largest number in the array
 	 */
-	public static void radixSort(int[] list, int numberOfDigits) {
+	public static void radixSort(int[] list, int numberOfDigits)
+    {
 		// perform radix sort
 	}
 
