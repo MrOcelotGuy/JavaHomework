@@ -1,9 +1,28 @@
 package chapter23.homework;
+/*
+ * Author: Diego Arturo Meneses Prieto
+ * Date: 2025-10-07
+ * Course: CIST-004B1 - Advanced Java Data Structures
+ * Homework: #15
+ * Description: This program compares the sorting speed of different sorting algorithms
+ * Honor Code: I affirm that this program is entirely my own work.
+ * Collaboration:
+ */
 
 public class Exercise23_13_skeleton
 {
 	public static void main(String[] args)
     {
+//        int[] testingList = {4, 5, 7, 1, 3, 6, 8, 2, 1, 8, 0, 21, 4};
+//        bubbleSort(testingList);
+//        for(int x: testingList)
+//        {
+//            System.out.print(x + ", ");
+//        }
+//        System.out.println();
+//        System.out.println();
+
+
 		System.out.printf("%12s%12s%12s%12s%12s%12s%12s%12s\n", "Array", "Selection", "Insertion", "Bubble", "Merge",
 				"Quick", "Heap", "Radix");
 		System.out.printf("%12s%12s%12s%12s%12s%12s%12s%12s\n", "Size", "Sort", "Sort", "Sort", "Sort", "Sort", "Sort",
@@ -85,22 +104,68 @@ public class Exercise23_13_skeleton
 	public static void selectionSort(int[] list)
     {
 		// perform selection sort
+        //done
+        int index = 0;
+        for(int i = 0; i < list.length; i++)
+        {
+            int temp = list[i];
+            for(int j = i; j < list.length; j++)
+            {
+                temp = Math.min(temp, list[j]);
+                if(temp == list[j])
+                {
+                    index = j;
+                }
+            }
+            list[index] = list[i];
+            list[i] = temp;
+
+        }
+
 	}
 
 	/** The method for sorting the numbers */
 	public static void insertionSort(int[] list)
     {
 		// perform insertion sort
+        for(int i = 1; i < list.length; i++)
+        {
+            int temp = list[i];
+            int k;
+            for(k = i - 1 ; k >= 0 && list[k] > temp; k--)
+            {
+                list[k+1] = list[k]; //pushes elements to the right
+            }
+            list[k+1] = temp; //inserts at desired position
+        }
+
 	}
 
 	/** The method for sorting the numbers */
 	public static void bubbleSort(int[] list) {
 		// perform bubble sort
+        boolean unFinished = true; //this is to determine if more repetition is needed
+        for(int i = 1; i < list.length && unFinished; i++)
+        {
+            unFinished = false;
+            for (int j = 0; j < list.length - i; j++)
+            {
+
+                if (list[j] > list[j + 1])
+                {
+                    int temp = list[j + 1];
+                    list[j + 1] = list[j];
+                    list[j] = temp;
+                    unFinished = true;
+                }
+            }
+        }
 	}
 
 	/** The method for sorting the numbers */
 	public static void mergeSort(int[] list) {
 		// perform merge sort
+
 	}
 
 	private static int[] merge(int[] list1, int[] list2) {
@@ -124,6 +189,8 @@ public class Exercise23_13_skeleton
 
 	public static void heapSort(Comparable[] list) {
 		// perform heap sort
+        
+
 	}
 
 	/**
@@ -133,6 +200,7 @@ public class Exercise23_13_skeleton
 	public static void radixSort(int[] list, int numberOfDigits)
     {
 		// perform radix sort
+
 	}
 
 	/**
