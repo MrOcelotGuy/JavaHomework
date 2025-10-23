@@ -27,11 +27,11 @@ public class RadixSort
             bucket.add(new ArrayList<>());
         }
 
-        for(int i = 1; i <= 6; i++)
+        for(int i = 0; i < 6; i++)
         {
             for(int j = 0; j < list.size(); j++)
             {
-                bucket.get( (int) ((list.get(j))/(Math.pow(10, i))%10)).add(list.get(j));
+                bucket.get( (int) ((list.get(j))/(Math.pow(10, i)) %10) ) .add(list.get(j));
             }
             list.clear();
             for(int k = 0; k < bucket.size(); k++)

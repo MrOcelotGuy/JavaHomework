@@ -14,7 +14,8 @@ public class MinHeap<E extends Comparable> {
     private ArrayList<E> heap = new ArrayList<>();
 
 
-    public MinHeap() {
+    public MinHeap()
+    {
 
     }
 
