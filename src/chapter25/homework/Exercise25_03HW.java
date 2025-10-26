@@ -10,6 +10,7 @@ public class Exercise25_03HW {
 
 		BST<Integer> tree = new BST<>();
 		// Prompt the user to enter 10 integers and store them in the tree
+        System.out.println("Enter 10 integers to store in the tree");
 		for (int i = 0; i < 10; i++) {
 			tree.insert(input.nextInt());
 		}
@@ -36,17 +37,20 @@ public class Exercise25_03HW {
 		protected int size = 0;
 
 		/** Create a default binary search tree */
-		public BST() {
+		public BST()
+        {
 		}
 
 		/** Create a binary search tree from an array of objects */
-		public BST(E[] objects) {
+		public BST(E[] objects)
+        {
 			for (int i = 0; i < objects.length; i++)
 				insert(objects[i]);
 		}
 
 		/** Return true if the element is in the tree */
-		public boolean search(E e) {
+		public boolean search(E e)
+        {
 			TreeNode<E> current = root; // Start from the root
 
 			while (current != null) {
@@ -101,6 +105,7 @@ public class Exercise25_03HW {
 		/** Inorder traversal from the root */
 		public void inorder() {
 			inorder(root);
+
 		}
 
 		/** Inorder traversal from a subtree */
@@ -245,22 +250,26 @@ public class Exercise25_03HW {
 		}
 
 		// Inner class InorderIterator
-		private class InorderIterator implements java.util.Iterator<E> {
+		private class InorderIterator implements java.util.Iterator<E>
+        {
 			// Store the elements in a list
 			private java.util.ArrayList<E> list = new java.util.ArrayList<E>();
 			private int current = 0; // Point to the current element in list
 
-			public InorderIterator() {
+			public InorderIterator()
+            {
 				inorder(); // Traverse binary tree and store elements in list
 			}
 
 			/** Inorder traversal from the root */
-			private void inorder() {
+			private void inorder()
+            {
 				inorder(root);
 			}
 
 			/** Inorder traversal from a subtree */
-			private void inorder(TreeNode<E> root) {
+			private void inorder(TreeNode<E> root)
+            {
 				if (root == null)
 					return;
 				inorder(root.left);
@@ -304,13 +313,27 @@ public class Exercise25_03HW {
 				return;
 
 			stack.push(root);
-			while (!stack.isEmpty()) {
+			while (!stack.isEmpty())
+            {
 				// peek the stack
 
 				// if the node has a new left child node push the left child node to the stack
 				// bc it should go before the node
 				// else add the node to the list and pop the stack
 				// and if there is a right child node, add the right child node to the stack
+                if(stack.peek().left != null )
+                {
+                    list.add(stack.peek().left);
+                    list.add(stack.peek());
+                }
+                else
+                {
+                    list.add(stack.pop());
+                }
+                if(stack.peek().right != null)
+                {
+                    stack.push(stack.peek().right);
+                }
 			}
 
 			for (int i = 0; i < list.size(); i++)

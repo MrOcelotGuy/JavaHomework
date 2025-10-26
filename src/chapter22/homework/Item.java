@@ -12,7 +12,8 @@ public class Item {
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return name + ":" + value + "|" + weight;
     }
 }

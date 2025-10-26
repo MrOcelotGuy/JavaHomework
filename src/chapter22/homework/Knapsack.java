@@ -1,6 +1,5 @@
 package chapter22.homework;
 
-import java.util.*;
 /*
  * Author: Diego Arturo Meneses Prieto
  * Date: 2025-10-07
@@ -20,15 +19,42 @@ public class Knapsack {
         final int MIN_VALUE = 50;
         final int MAX_VALUE = 100;
         final int KNAPSACK_CAPACITY = 20;
-        Item[] items = generateItems(NUMBER_ITEMS, MIN_VALUE, MAX_VALUE, MIN_WEIGHT, MAX_WEIGHT);
+        Item[] startItems = generateItems(NUMBER_ITEMS, MIN_VALUE, MAX_VALUE, MIN_WEIGHT, MAX_WEIGHT);
+
+//        Item[] startItems = {new Item("Item0", 91, 1),
+//                new Item("Item1", 67, 2),
+//                new Item("Item2", 97, 4),
+//                new Item("Item3", 62, 4),
+//                new Item("Item4", 86, 5),
+//                new Item("Item5", 74, 1),
+//                new Item("Item6", 98, 5),
+//                new Item("Item7", 55, 3),
+//                new Item("Item8", 60, 2),
+//                new Item("Item9", 53, 4)};
 
         // your work
+        GridEntry[][] grid = new GridEntry[KNAPSACK_CAPACITY][NUMBER_ITEMS];
+
+        for(int i = 0; i < KNAPSACK_CAPACITY; i++)
+        {
+            if(startItems[0].weight <= KNAPSACK_CAPACITY)
+            {
+                grid[0][i].totalValue = startItems[0].value;
+                grid[0][i].items.add(startItems[0]);
+            }
+        }
+
+
+
+
 
     }
 
-     public static Item[] generateItems(int howMany, int lValue, int hValue, int lWeight, int hWeight) {
+     public static Item[] generateItems(int howMany, int lValue, int hValue, int lWeight, int hWeight)
+     {
         Item[] results = new Item[howMany];
-        for (int i = 0; i < howMany; i++) {
+        for (int i = 0; i < howMany; i++)
+        {
             int value = (int) (Math.random() * (hValue - lValue + 1)) + lValue;
             int weight = (int) (Math.random() * (hWeight - lWeight + 1)) + lWeight;
             results[i] = new Item("Item" + i, value, weight);

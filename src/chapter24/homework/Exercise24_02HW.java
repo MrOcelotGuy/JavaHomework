@@ -1,9 +1,8 @@
 package chapter24.homework;
-
 import java.util.*;
 /*
  * Author: Diego Arturo Meneses Prieto
- * Date: 2025-10-07
+ * Date: 2025-10-23
  * Course: CIST-004B1 - Advanced Java Data Structures
  * Homework: #17
  * Description: This program implements a linkedlist
@@ -34,9 +33,9 @@ public class Exercise24_02HW {
 		System.out.println("contains?: " + list.contains(name)); //works
 		System.out.println("What is at the index? " + list.get(index)); //works
 		System.out.println("Index of name entered? " + list.indexOf(name)); //works
-		System.out.println("Last Index of name entered? " + list.lastIndexOf(name)); //doesn't work
+		System.out.println("Last Index of name entered? " + list.lastIndexOf(name)); //works
         System.out.println("Gonna set the name at the index to your name");
-        list.set( index, name); //doesn't work
+        list.set( index, name); //works
 
 		System.out.println(list);
 	}
@@ -381,7 +380,14 @@ public class Exercise24_02HW {
         {
 			// implement in this exercise
 
-			return -1;
+            for(int i = this.size()-1; i > 0; i--)
+            {
+                if(this.get(i).equals(o))
+                {
+                    return i;
+                }
+            }
+            return -1;
 		}
 
 		@Override /**
@@ -391,7 +397,8 @@ public class Exercise24_02HW {
 		public E set(int index, E e)
         {
 			// implement in this exercise
-
+            this.add(index, e);
+            this.remove(index+1);
 			return null;
 		}
 
@@ -420,8 +427,8 @@ public class Exercise24_02HW {
 
 			@Override
 			public void remove() {
-
 				// Left as an exercise
+
 			}
 		}
 
@@ -440,3 +447,14 @@ public class Exercise24_02HW {
 		}
 	}
 }
+// /Users/diegomeneses/Library/Java/JavaVirtualMachines/openjdk-24.0.2+12-54/Contents/Home/bin/java -Djava.library.path=/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51508 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/diegomeneses/Projects/Java School Project/JavaHomework/out/production/Java Homework:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx-swt.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.web.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.base.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.fxml.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.media.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.swing.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/jdk.jsobject.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.controls.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/javafx.graphics.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/jfx.incubator.input.jar:/Users/diegomeneses/Projects/libraries/javafx-sdk-25.0.1/lib/jfx.incubator.richtext.jar chapter24.homework.Exercise24_02HW
+//Enter a name: Jane
+//Enter an index: 6
+//contains?: true
+//What is at the index? George
+//Index of name entered? 7
+//Last Index of name entered? 11
+//Gonna set the name at the index to your name
+//[Tom, Susan, Kim, George, Peter, Jean, Jane, Jane, Denise, Jenny, Kathy, Jane]
+//
+//Process finished with exit code 0

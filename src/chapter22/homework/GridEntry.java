@@ -6,7 +6,9 @@ public class GridEntry
     public ArrayList<Item> items = new ArrayList<>();
     public int totalValue;
 
-    public String toString() {
+
+    public String toString()
+    {
         String output = "Total Value:$" + totalValue + " ";
         for (Item i: items) {
             output += i + " ";
