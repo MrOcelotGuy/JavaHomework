@@ -4,7 +4,7 @@ import java.util.*;
 public class GridEntry
 {
     public ArrayList<Item> items = new ArrayList<>();
-    public int totalValue;
+    public int totalValue = 0;
 
 
     public String toString()
