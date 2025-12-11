@@ -9,8 +9,9 @@ public class IntStreamDemo {
     int[] values = {3, 4, 1, 5, 20, 1, 3, 3, 4, 6};
     
     System.out.println("The average of distinct even numbers > 3: " +
-      IntStream.of(values).distinct()
-        .filter(e -> e > 3 && e % 2 == 0).average().getAsDouble());
+      IntStream.of(values)
+              .distinct()
+              .filter(e -> e > 3 && e % 2 == 0).average().getAsDouble());
     
     System.out.println("The sum of the first 4 numbers is " +
       IntStream.of(values).limit(4).sum());

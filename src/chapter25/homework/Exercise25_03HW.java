@@ -1,3 +1,12 @@
+/*
+ * Author: Diego Arturo Meneses Prieto
+ * Date: 2025-12-8
+ * Course: CIST-004B1 - Advanced Java Data Structures
+ * Homework: #20
+ * Description: I write an inorder recursive program
+ * Honor Code: I affirm that this program is entirely my own work.
+ * Collaboration: You helped me out with this in office hours
+ */
 package chapter25.homework;
 
 import java.util.Scanner;
@@ -103,7 +112,7 @@ public class Exercise25_03HW {
 		}
 
 		/** Inorder traversal from the root */
-		public void inorder() {
+        public void inorder() {
 			inorder(root);
 
 		}
@@ -305,7 +314,10 @@ public class Exercise25_03HW {
 		}
 
 		/** Inorder traversal from the root */
-		public void nonRecursiveInorder() {
+
+        //THE HOMEWORK
+		public void nonRecursiveInorder()
+        {
 			java.util.ArrayList<TreeNode<E>> list = new java.util.ArrayList<TreeNode<E>>();
 			java.util.Stack<TreeNode<E>> stack = new java.util.Stack<TreeNode<E>>();
 
@@ -321,18 +333,21 @@ public class Exercise25_03HW {
 				// bc it should go before the node
 				// else add the node to the list and pop the stack
 				// and if there is a right child node, add the right child node to the stack
-                if(stack.peek().left != null )
+
+                TreeNode<E> node = (TreeNode<E>) (stack.peek()); //make a node object each time it loops
+                //so like
+                if(node.left != null && !list.contains(node.left))
                 {
-                    list.add(stack.peek().left);
-                    list.add(stack.peek());
+                    stack.push(node);
                 }
                 else
                 {
-                    list.add(stack.pop());
-                }
-                if(stack.peek().right != null)
-                {
-                    stack.push(stack.peek().right);
+                    stack.pop();
+                    list.add(node);
+                    if(node.right != null)
+                    {
+                        stack.push(node.right);
+                    }
                 }
 			}
 

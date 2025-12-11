@@ -8,8 +8,10 @@ public class StreamDemo {
       "George", "Alan", "Stacy", "Michelle", "john"};
     
     // Display the first four names sorted
-    Stream.of(names).limit(4).sorted()
-      .forEach(e -> System.out.print(e + " "));
+    Stream.of(names)
+            .limit(4)
+            .sorted()
+            .forEach(e -> System.out.print(e + " "));
 
     // Skip four names and display the rest sorted ignore case
     System.out.println();

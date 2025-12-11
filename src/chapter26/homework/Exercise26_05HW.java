@@ -1,4 +1,13 @@
-package hw;
+/*
+ * Author: Diego Arturo Meneses Prieto
+ * Date: 2025-12-8
+ * Course: CIST-004B1 - Advanced Java Data Structures
+ * Homework: #23
+ * Description: I add size to the AVL tree node
+ * Honor Code: I affirm that this program is entirely my own work.
+ * Collaboration:
+ */
+package chapter26.homework;
 
 import java.util.Scanner;
 import chapter25.Tree;
@@ -22,6 +31,7 @@ class AVLTree2<E extends Comparable<E>> extends BST2<E> {
 	 * Create a default AVL tree
 	 */
 	public AVLTree2() {
+
 	}
 
 	/**
@@ -43,12 +53,28 @@ class AVLTree2<E extends Comparable<E>> extends BST2<E> {
 		return ((AVLTree2Node<E>) this.root).size;
 	}
 
-	public E find(double k) {
+	public E find(double k)
+    {
 		return find(k, (AVLTree2Node<E>) this.root);
 	}
 
 	public E find(double k, AVLTree2Node<E> node) {
 		// your work
+        if(this.root.left == null)
+        {
+            if(k == 1)
+            {
+                return this.root.element;
+            }
+            else if (k == 2)
+            {
+                return root.right.element;
+            }
+        }
+        else if(k <= getSize())
+        {
+
+        }
 		return null;
 	}
 
@@ -335,7 +361,8 @@ class AVLTree2<E extends Comparable<E>> extends BST2<E> {
 	}
 }
 
-class BST2<E extends Comparable<E>> implements Tree<E> {
+class BST2<E extends Comparable<E>> implements Tree<E>
+{
 	protected TreeNode<E> root;
 	protected int size = 0;
 
@@ -362,11 +389,14 @@ class BST2<E extends Comparable<E>> implements Tree<E> {
 		TreeNode<E> current = root; // Start from the root
 
 		while (current != null) {
-			if (e.compareTo(current.element) < 0) {
+			if (e.compareTo(current.element) < 0)
+            {
 				current = current.left;
-			} else if (e.compareTo(current.element) > 0) {
+			}
+            else if (e.compareTo(current.element) > 0) {
 				current = current.right;
-			} else // element matches current.element
+			}
+            else // element matches current.element
 			{
 				return true; // Element is found
 			}
@@ -381,27 +411,39 @@ class BST2<E extends Comparable<E>> implements Tree<E> {
 	 * successfully
 	 */
 	public boolean insert(E e) {
-		if (root == null) {
+		if (root == null)
+        {
 			root = createNewNode(e); // Create a new root
-		} else {
+		}
+        else
+        {
 			// Locate the parent node
 			TreeNode<E> parent = null;
 			TreeNode<E> current = root;
-			while (current != null) {
-				if (e.compareTo(current.element) < 0) {
+			while (current != null)
+            {
+				if (e.compareTo(current.element) < 0)
+                {
 					parent = current;
 					current = current.left;
-				} else if (e.compareTo(current.element) > 0) {
+				}
+                else if (e.compareTo(current.element) > 0)
+                {
 					parent = current;
 					current = current.right;
-				} else {
+				}
+                else
+                {
 					return false; // Duplicate node not inserted
 				}
 			}
 			// Create the new node and attach it to the parent node
-			if (e.compareTo(parent.element) < 0) {
+			if (e.compareTo(parent.element) < 0)
+            {
 				parent.left = createNewNode(e);
-			} else {
+			}
+            else
+            {
 				parent.right = createNewNode(e);
 			}
 		}
