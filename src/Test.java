@@ -4,28 +4,17 @@ public class Test
 {
     public static void main(String[] args)
     {
-
-        PriorityQueue<Integer> queue =
-                new PriorityQueue<Integer>(
-                        Arrays.asList(60, 10, 50, 30, 40, 20));
-
-        for (int i: queue)
-            System.out.print(i + " ");
-        queue.poll();
+        printConvert(0x12345678);
         System.out.println();
-        for (int i: queue)
-            System.out.print(i + " ");
-        queue.poll();
-        System.out.println();
-        for (int i: queue)
-            System.out.print(i + " ");
-        queue.poll();
-        System.out.println();
-        for (int i: queue)
-            System.out.print(i + " ");
-        queue.poll();
-        System.out.println();
-        for (int i: queue)
-            System.out.print(i + " ");
+        System.out.println("00010010001101000101011001111000".equals("00010010001101000101011001111000"));
     }
+    public static void printConvert(long n)
+    {
+        for(long i = 31; i >= 0; i--)
+        {
+            System.out.print( (n & ((long)Math.pow(2, i) ) )>= 1 ? 1 : 0);
+
+        }
+    }
+
 }
